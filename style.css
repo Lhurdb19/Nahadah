@@ -177,6 +177,8 @@ ul:nth-child(2) > li:nth-child(2) > a {
   border-radius: 10px;
   box-shadow: 10px 10px 10px 10px lightgray;
 }
+
+
 .dropdown-blogs {
   float: left;
   overflow: hidden;
@@ -260,9 +262,11 @@ ul:nth-child(2) > li:nth-child(2) > a {
 @media screen and (max-width:650px) {
   nav {
       width: 100%;
-      height: fit-content;
+      height: 60px;
       padding: 5px;
       border-bottom: 0.5px solid #5e5b5b;
+      position: fixed;
+      z-index: 100;
   }
 
   nav > .logo {
@@ -288,7 +292,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
       flex-direction: column;
       position: absolute;
       padding: 5px;
-      gap: 30px;
+      gap: 10px;
       top: 50px;
       left: -100%;
       transition: 0.5s ease-in-out;
@@ -330,7 +334,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
   } 
   
   .clock {
-    width: 100px;
+    width: 80px;
     box-shadow: none;
   }
 
@@ -352,7 +356,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
 @media screen and (max-width:768px) {
   nav {
       width: 100%;
-      height: fit-content;
+      height: 60px;
       padding: 10px;
       border-bottom: 0.5px solid #5e5b5b;
   }
@@ -364,8 +368,8 @@ ul:nth-child(2) > li:nth-child(2) > a {
   }
   
   .logo > a > img {
-    width: 90px;
-    height: 70px;
+    width: 80px;
+    height: 60px;
     justify-content: flex-start;
   }
   .logo > a > h4 {
@@ -374,15 +378,15 @@ ul:nth-child(2) > li:nth-child(2) > a {
 
   .navbar {
       width: 100%;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
       position: absolute;
       padding: 5px;
-      gap: 30px;
-      top: 50px;
+      gap: 5px;
+      top: 10px;
       left: -100%;
       transition: 0.5s ease-in-out;
       background-color: white;
@@ -391,7 +395,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
   .navbar > ul:nth-child(1) {
       flex-direction: column;
       margin-left: 0%;
-      gap: 30px;
+      gap: 10px;
   }
   
   .navbar > ul:nth-child(1) > li > a { 
@@ -421,9 +425,41 @@ ul:nth-child(2) > li:nth-child(2) > a {
   .search-btn{
   display: none;
   }
+
+  .dropdown-blogs {
+    display: none;
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown-blogs > .dropbtn {
+    width: 100px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    padding: 10px;
+    margin: 0%;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: block;
+    position: static;
+    background-color: #f9f9f9;
+    z-index: 1;
+  }
+  
+  .dropdown-content > a{
+    display: flex;
+    padding: 10px;
+    color: black;
+    text-align: left;
+  }
     
   .clock {
-    width: 100px;
+    width: 90px;
     box-shadow: none;
   }
 
@@ -1018,6 +1054,7 @@ section > #home {
 @media screen and (max-width:650px) {
   .mother-container {
     width: 100%;
+    background-image: none;
     padding: 0px;
     gap: 10px;
   }
@@ -1029,6 +1066,7 @@ section > #home {
 @media screen and (max-width:768px) {
   .mother-container {
     width: 100%;
+    background-image: none;
     padding: 0px;
     gap: 10px;
   }
@@ -1099,14 +1137,18 @@ section {
 }
 
 .pro-speech > details > p {
-  color: #8a7c7c;
+  color: #302424;
   line-height: 2rem;
   font-size: 17px;
 }
 
 @media screen and (max-width:650px) {
   #about {
-    width: 100%;
+    width: 100%;  
+  background-image: url(https://i.ibb.co/mC6qqx7/2-removebg-preview.png);
+  background-position: center;
+  background-repeat: repeat;
+  background-size:cover;
     height: fit-content;
     flex-direction: column;
     margin-top: 10px;
@@ -1134,7 +1176,7 @@ section {
   }
   .pro-speech > details > p {
     line-height: 1.5rem;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width:768px) {
@@ -1545,6 +1587,7 @@ button {
     width: 70px;
     font-size: 8px;
     padding: 8px;
+    margin-bottom: 5px;
   }
 }
 
@@ -1598,14 +1641,14 @@ button {
   }
   
   .why-choosing-us > h2 {
-    font-size: 15px;
+    font-size: 16px;
     margin: 10px 0;
     text-align: center;
   }
   .why-choosing-us > p {
     margin: 0;
     padding: 10px;
-    font-size: 13px;
+    font-size: 15px;
   
   }
   .why-choosing-us > img {
@@ -1627,14 +1670,14 @@ button {
   }
   
   .why-choosing-us > h2 {
-    font-size: 15px;
+    font-size: 16px;
     margin: 10px 0;
     text-align: center;
   }
   .why-choosing-us > p {
     margin: 0;
     padding: 10px;
-    font-size: 13px;
+    font-size: 15px;
   
   }
   .why-choosing-us > img {
@@ -1702,18 +1745,58 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
+    font-size: 16px;
     text-align: center;
     margin-top: 10px;
   }
   
   .why-your-child > h2 {
     color: #143b8f;
-    font-size: 13px;
+    font-size: 16px;
     margin-top: 30px;
   }
   .why-your-child > p {
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+  
+  .why-your-child > img {
+    width: 100%;
+    height: 200px;
+    margin-left: 0px;
+    margin-top: 20px;
+  }  
+}
+@media screen and (max-width:768px) {
+  #faq {
+    width: 100%;
+    margin: 0%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  #faq > .why-your-child {
+    width: 100%;
+    gap: 10px;
+    line-height: 1.5rem;
+  }
+  
+  .why-your-child > h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .why-your-child > h2 {
+    color: #143b8f;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .why-your-child > p {
+    font-size: 15px;
     font-weight: normal;
   }
   
@@ -1744,6 +1827,22 @@ button {
 }
 
 @media screen and (max-width:650px) {
+  #database {
+    width: 100%;
+    height: 700px;
+    padding: 0px;
+    margin: 0%;
+    background-color: white;
+    display: none;
+  }
+  #database > #myPlot {
+    width: 100%;
+    height: fit-content;
+    min-width: 10px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:768px) {
   #database {
     width: 100%;
     height: 700px;
@@ -1845,7 +1944,7 @@ button {
     font-size: 20px;
   }
   .address > .location > a {
-    font-size: 12px;
+    font-size: 13px;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
@@ -1860,7 +1959,7 @@ button {
     font-size: 20px;
   }
   .address > .location > a {
-    font-size: 12px;
+    font-size: 13px;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
@@ -2514,11 +2613,17 @@ form > button {
     padding: 10px 20px;
     color: white;
     font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .cont-sign > .sign {
     padding: 10px;
     color: white;
     font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: black;
   }
 }
@@ -2532,12 +2637,18 @@ form > button {
     padding: 10px 20px;
     color: white;
     font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .cont-sign > .sign {
     padding: 10px;
     color: white;
     font-size: 14px;
     background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -2735,8 +2846,6 @@ footer {
   footer {
     width: 100%;
     padding: 10px;
-    font-size: 9px;
-    justify-content: flex-start;
-    align-items: flex-start;
+    font-size: 12px;
   }
 }
