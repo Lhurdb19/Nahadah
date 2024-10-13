@@ -294,7 +294,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
       flex-direction: column;
       position: absolute;
       padding: 5px;
-      gap: 10px;
+      gap: 40px;
       top: 50px;
       left: -100%;
       transition: 0.5s ease-in-out;
@@ -321,6 +321,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
 
   .navbar > ul:nth-child(2) > li > a { 
       font-size: 1rem;
+      gap: 20px;
       color: black;
   }
 
@@ -387,7 +388,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
       flex-direction: column;
       position: absolute;
       padding: 5px;
-      gap: 5px;
+      gap: 50px;
       top: 10px;
       left: -100%;
       transition: 0.5s ease-in-out;
@@ -414,6 +415,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
 
   .navbar > ul:nth-child(2) > li > a { 
       font-size: 1rem;
+      gap: 20px;
       color: black;
   }
 
@@ -1362,7 +1364,7 @@ section {
     line-height: 1.5rem;
   }
   .our-vision > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1384,7 +1386,7 @@ section {
     line-height: 1.5rem;
   }
   .our-vision > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1433,7 +1435,7 @@ section {
     line-height: 1.5rem;
   }
   .our-mission > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1448,7 +1450,7 @@ section {
     line-height: 1.5rem;
   }
   .our-mission > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1497,7 +1499,7 @@ section {
     line-height: 1.5rem;
   }
   .our-aim > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1512,7 +1514,7 @@ section {
     line-height: 1.5rem;
   }
   .our-aim > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1560,7 +1562,7 @@ section {
     line-height: 1.5rem;
   }
   .our-driving > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1575,7 +1577,7 @@ section {
     line-height: 1.5rem;
   }
   .our-driving > .image {
-    width: 90%;
+    width: 100%;
     height: 200px;
   }
 }
@@ -1605,17 +1607,17 @@ button {
 
 @media screen and (max-width:650px) {
   button {
-    width: 70px;
-    font-size: 8px;
-    padding: 8px;
+    width: 100px;
+    font-size: 13px;
+    /* padding: 8px; */
   }
 }
 
 @media screen and (max-width:768px) {
   button {
-    width: 70px;
-    font-size: 8px;
-    padding: 8px;
+    width: 100px;
+    font-size: 13px;
+    /* padding: 8px; */
     margin-bottom: 5px;
   }
 }
@@ -2183,8 +2185,8 @@ button {
   display: flex;
   background-color: #e4e0e0;
   justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
   opacity: 0.8;
   padding: 10px;
 }
