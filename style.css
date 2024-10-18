@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: Montserrat;
-  src: url(/assets/static/Montserrat-Light.ttf);
+  src: url(/Montserrat-Light.ttf);
 }
 
 body {
@@ -67,12 +67,13 @@ nav {
 }
 
 .logo {
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  gap: 1px;
+  margin-left: 25px;
+  gap: 0px;
 }
 .logo > a {
   text-decoration: none;
@@ -85,14 +86,15 @@ nav {
 .logo > a > h4 {
   /* width: 110px; */
   font-size: 9px;
-  color: #143b8f;
+  color: #f5f7fa;
+  margin-bottom: 10px;
 }
 
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 40px;
   color: #fff;
 }
@@ -153,74 +155,46 @@ nav {
 
 .navbar > ul:nth-child(2) {
   width: 100%;
-  height: 36px;
+  height: 35px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
-  background-color: #fff;
   gap: 0px;
   border-radius: 0px 7px 0px 7px;
+  background-color: #fff;
+  color: #9e3707;
 }
 
 ul:nth-child(2) > li > a {
-  color: #a55c3a;
+  color: #000;
   font-size: 14px;
-  padding: 10px 4px;
-  font-weight: 700;
+  padding: 10px;
+  font-weight: 600;
   text-decoration: none;
 }
+ul:nth-child(2) > li:nth-child(1) > a {
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 0  7px 0 7px;
+}
+
 ul:nth-child(2) > li:nth-child(2) > a {
   color: white;
-  font-size: 14px;
-  padding: 9px 4px;
+  font-size: 13px;
   text-decoration: none;
   background-color: #a55c3a;
-  border-radius: 0  7px 0 7px;
-  /* box-shadow: 2px 2px 1px 1px #585353; */
+  border-radius: 0  7px 0 0px;
+}
+ul:nth-child(2) > li:nth-child(1) > a:hover {
+  background-color: #9e3707;
+  color: white;
+  border-radius: 0px 0px 0px 7px;
+}
+ul:nth-child(2) > li:hover > a {
+  color: white;
 }
 
-
-.dropdown-blogs {
-  float: left;
-  overflow: hidden;
-  transform: translateX(25px);
-}
-
-.dropdown-blogs > .dropbtn {
-  width: 100px;
-  font-size: 17px;
-  border: none;
-  outline: none;
-  /* background-color: inherit; */
-  margin: 0%;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  min-width: 100px;
-  z-index: 999;
-}
-
-.dropdown-content > a{
-  float: none;
-  display: block;
-  padding: 10px;
-  color: #008B8B;
-  text-align: left;
-}
-
-.dropdown-content > a:hover {
-  background-color: #008B8B;
-  color: #fff;
-}
-
-.dropdown-blogs:hover > .dropdown-content {
-  display: block;
-}
 
 .clock {
   width: 300px;
@@ -256,7 +230,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
 .handburger > .bar {
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: #fff;
   margin: 5px auto;
   transition: all 0.5s ease-in-out;
 }
@@ -265,14 +239,15 @@ ul:nth-child(2) > li:nth-child(2) > a {
   nav {
       width: 100%;
       height: 60px;
-      padding: 5px;
+      padding: 0px;
       border-bottom: 0.5px solid #5e5b5b;
       position: fixed;
       z-index: 100;
+      /* background-color: #fff; */
   }
 
-  nav > .logo {
-    width: 20%;
+  .logo {
+    width: 15%;
       margin: 0%;
       height: 70px;
   }
@@ -287,16 +262,16 @@ ul:nth-child(2) > li:nth-child(2) > a {
 
   .navbar {
       width: 100%;
-      min-height: 100vh;
+      min-height: 40vh;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
       position: absolute;
       padding: 5px;
-      gap: 40px;
-      top: 50px;
-      left: -100%;
+      gap: 20px;
+      top: 60px;
+      left: 100%;
       transition: 0.5s ease-in-out;
       background-color: white;
   }
@@ -335,14 +310,59 @@ ul:nth-child(2) > li:nth-child(2) > a {
   .search-btn{
     display: none;
   } 
+
+  .navbar > ul:nth-child(1) {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 30px;
+  }
+  .navbar > ul:nth-child(1) > li > a {
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  
+  .navbar > ul:nth-child(2) {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  ul:nth-child(2) > li > a {
+    color: #000;
+    padding: 0px;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+  ul:nth-child(2) > li:nth-child(2) > a {
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 0%;
+    /* box-shadow: 2px 2px 1px 1px #585353; */
+  }
   
   .clock {
     width: 80px;
     box-shadow: none;
   }
 
+  .clock > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
   .handburger {
       display: block;
+      padding-right: 10px;
   }
 
   .handburger.active .bar:nth-child(1){
@@ -360,12 +380,12 @@ ul:nth-child(2) > li:nth-child(2) > a {
   nav {
       width: 100%;
       height: 60px;
-      padding: 10px;
+      padding: 0px;
       border-bottom: 0.5px solid #5e5b5b;
   }
 
   nav > .logo {
-    width: 20%;
+    width: 15%;
       margin: 0%;
       height: 70px;
   }
@@ -381,18 +401,18 @@ ul:nth-child(2) > li:nth-child(2) > a {
 
   .navbar {
       width: 100%;
-      height: 100vh;
+      height: 40vh;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
       position: absolute;
       padding: 5px;
-      gap: 50px;
-      top: 10px;
-      left: -100%;
+      gap: 40px;
+      top: 60px;
+      left: 100%;
       transition: 0.5s ease-in-out;
-      background-color: white;
+      /* background-color: white; */
   }
 
   .navbar > ul:nth-child(1) {
@@ -409,13 +429,14 @@ ul:nth-child(2) > li:nth-child(2) > a {
   .navbar > ul:nth-child(2) {
       flex-direction: column;
       margin-left: 0%;
-      gap: 30px;
+      gap: 10px;
   }
 
 
   .navbar > ul:nth-child(2) > li > a { 
       font-size: 1rem;
-      gap: 20px;
+      gap: 0px;
+      margin-left: 0px;
       color: black;
   }
 
@@ -430,37 +451,6 @@ ul:nth-child(2) > li:nth-child(2) > a {
   display: none;
   }
 
-  .dropdown-blogs {
-    display: none;
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown-blogs > .dropbtn {
-    width: 100px;
-    font-size: 17px;
-    border: none;
-    outline: none;
-    background-color: inherit;
-    font-family: inherit;
-    padding: 10px;
-    margin: 0%;
-    cursor: pointer;
-  }
-  
-  .dropdown-content {
-    display: block;
-    position: static;
-    background-color: #f9f9f9;
-    z-index: 1;
-  }
-  
-  .dropdown-content > a{
-    display: flex;
-    padding: 10px;
-    color: black;
-    text-align: left;
-  }
     
   .clock {
     width: 90px;
@@ -469,6 +459,7 @@ ul:nth-child(2) > li:nth-child(2) > a {
 
   .handburger {
       display: block;
+      padding-right: 10px;
   }
 
   .handburger.active .bar:nth-child(1){
@@ -1365,7 +1356,7 @@ section {
   }
   .our-vision > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 @media screen and (max-width:768px) {
@@ -1387,7 +1378,7 @@ section {
   }
   .our-vision > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 
@@ -1411,7 +1402,7 @@ section {
 .our-mission > .image {
   width: 200px;
   height: 200px;
-  background-image: url("https://i.ibb.co/jGrbKsn/high-school-students-running-uniform.webp");
+  background-image: url("https://i.ibb.co/qN2Kjvh/sport-3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1436,7 +1427,7 @@ section {
   }
   .our-mission > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 @media screen and (max-width:768px) {
@@ -1451,7 +1442,7 @@ section {
   }
   .our-mission > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 
@@ -1500,7 +1491,7 @@ section {
   }
   .our-aim > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 @media screen and (max-width:768px) {
@@ -1515,7 +1506,7 @@ section {
   }
   .our-aim > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 
@@ -1563,7 +1554,7 @@ section {
   }
   .our-driving > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 @media screen and (max-width:768px) {
@@ -1578,7 +1569,7 @@ section {
   }
   .our-driving > .image {
     width: 100%;
-    height: 200px;
+    height: 300px;
   }
 }
 
@@ -1679,7 +1670,7 @@ button {
   }
   .why-choosing-us > img {
     width: 300px;
-    height: 200px;
+    height: 250px;
     margin: 0;
   }
 }
@@ -1708,7 +1699,7 @@ button {
   }
   .why-choosing-us > img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     margin: 0;
   }
 }
@@ -1734,16 +1725,22 @@ button {
   align-items: center;
   font-size: 20px;
   margin-top: 20px;
+  width: 70%;
+  margin-left: 190px;
 }
 
 .why-your-child > h2 {
+  width: 70%;
   color: #143b8f;
   font-size: 19px;
   margin-top: 20px;
+  margin-left: 190px;
 }
 .why-your-child > p {
+  width: 70%;
   font-size: 18px;
   font-weight: normal;
+  margin-left: 190px;
 }
 
 .why-your-child > img {
@@ -1751,6 +1748,88 @@ button {
   height: 600px;
   margin-left: 190px;
   margin-top: 20px;
+}
+
+.special-perform {
+  width: 72%;
+  gap: 20px;
+  line-height: 2rem;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 190px;
+}
+
+.special-perform > .special {
+  width: 100%;
+  gap: 20px;
+}
+.special > h2, .perform > h2 {
+  color: #143b8f;
+  font-size: 19px;
+  margin-top: 20px;
+}
+.special > p, .perform > p {
+  font-size: 18px;
+  font-weight: normal;
+}
+.special-perform > .perform {
+  width: 100%;
+  gap: 20px;
+}
+.tailor-flency {
+  width: 72%;
+  gap: 20px;
+  line-height: 2rem;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 190px;
+}
+
+.tailor-flency > .tailor {
+  width: 100%;
+  gap: 20px;
+}
+.tailor-flency > .flency {
+  width: 100%;
+  gap: 20px;
+}
+
+.tailor > h2, .flency > h2 {
+  color: #143b8f;
+  font-size: 19px;
+  margin-top: 20px;
+}
+.tailor > p, .flency > p {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.dedicated-through {
+  width: 72%;
+  gap: 20px;
+  line-height: 2rem;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 190px;
+}
+
+.dedicated-through > .dedicated {
+  width: 100%;
+  gap: 20px;
+}
+.dedicated-through > .through {
+  width: 100%;
+  gap: 20px;
+}
+
+.dedicated > h2, .through > h2 {
+  color: #143b8f;
+  font-size: 19px;
+  margin-top: 20px;
+}
+.dedicated > p, .through > p {
+  font-size: 18px;
+  font-weight: normal;
 }
 
 @media screen and (max-width:650px) {
@@ -1774,25 +1853,102 @@ button {
     font-size: 16px;
     text-align: center;
     margin-top: 10px;
+    margin-left: 0px;
+    width: 100%;
   }
   
   .why-your-child > h2 {
-    color: #143b8f;
+    width: 100%;
     font-size: 16px;
     margin-top: 30px;
+    margin-left: 0px;
+    text-align: center;
   }
   .why-your-child > p {
+    width: 100%;
     font-size: 15px;
-    font-weight: normal;
+    margin-left: 0px;
   }
   
   .why-your-child > img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     margin-left: 0px;
     margin-top: 20px;
   }  
+  .why-your-child > .special-perform {
+    width: 100%;
+    gap: 10px;
+    line-height: 1.5rem;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .special > h2, .perform > h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .special > p, .perform > p {
+    font-size: 15px;
+  }
+  .special-perform > .special {
+    width: 100%;
+    gap: 20px;
+  }
+  .special-perform > .perform {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .why-your-child > .tailor-flency {
+    width: 100%;
+    gap: 10px;
+    line-height: 1.5rem;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .tailor > h2, .flency > h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .tailor > p, .flency > p {
+    font-size: 15px;
+  }
+  .tailor-flency > .tailor {
+    width: 100%;
+    gap: 20px;
+  }
+  .tailor-flency > .flency {
+    width: 100%;
+    gap: 20px;
+  }
+  .why-your-child > .dedicated-through {
+    width: 100%;
+    gap: 10px;
+    line-height: 1.5rem;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .dedicated-through > .dedicated {
+    width: 100%;
+    gap: 20px;
+  }
+  .dedicated-through > .through {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .dedicated > h2, .through > h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .dedicated > p, .through > p {
+    font-size: 15px;
+  }
 }
+
 @media screen and (max-width:768px) {
   #faq {
     width: 100%;
@@ -1814,24 +1970,100 @@ button {
     font-size: 16px;
     text-align: center;
     margin-top: 10px;
+    margin-left: 0px;
+    width: 100%;
   }
   
   .why-your-child > h2 {
-    color: #143b8f;
+    width: 100%;
     font-size: 16px;
     margin-top: 30px;
+    margin-left: 0px;
+    text-align: center;
   }
   .why-your-child > p {
+    width: 100%;
     font-size: 15px;
-    font-weight: normal;
+    margin-left: 0px;
   }
   
   .why-your-child > img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     margin-left: 0px;
     margin-top: 20px;
   }  
+  .why-your-child > .special-perform {
+    width: 100%;
+    gap: 10px;
+    line-height: 1.5rem;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .special > h2, .perform > h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .special > p, .perform > p {
+    font-size: 15px;
+  }
+  .special-perform > .special {
+    width: 100%;
+    gap: 20px;
+  }
+  .special-perform > .perform {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .why-your-child > .tailor-flency {
+    width: 100%;
+    gap: 10px;
+    line-height: 1.5rem;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .tailor > h2, .flency > h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .tailor > p, .flency > p {
+    font-size: 15px;
+  }
+  .tailor-flency > .tailor {
+    width: 100%;
+    gap: 20px;
+  }
+  .tailor-flency > .flency {
+    width: 100%;
+    gap: 20px;
+  }
+  .why-your-child > .dedicated-through {
+    width: 100%;
+    gap: 10px;
+    line-height: 1.5rem;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  .dedicated-through > .dedicated {
+    width: 100%;
+    gap: 20px;
+  }
+  .dedicated-through > .through {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .dedicated > h2, .through > h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .dedicated > p, .through > p {
+    font-size: 15px;
+  }
 }
 
 
@@ -1864,16 +2096,17 @@ button {
   width: 100%;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 50px;
 }
+
 
 @media screen and (max-width:650px) {
   #contacts {
     width: 100%;
     flex-direction: column;
-    padding: 10px 0px;
+    padding: 0px 0px;
   }
   #contacts > h1 {
     font-size: 17px;
@@ -1883,6 +2116,7 @@ button {
     justify-content: center;
     flex-direction: column;
   }
+  
 }
 @media screen and (max-width:768px) {
   #contacts {
@@ -1902,15 +2136,16 @@ button {
 }
 
 .lonuma > .location {
-  width: 50%;
-  gap: 10px;
+  width: 100%;
+  gap: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: flex-start;
   line-height: 1.7rem;
 }
 .lonuma > .location > h3 {
+  width: 260px;
   font-size: 25px;
   color: #302e2e;
 }
@@ -1920,7 +2155,7 @@ button {
   color: #008B8B;
   justify-content: flex-start;
   text-align: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 .location > a > i {
   font-size: 30px;
@@ -1929,16 +2164,24 @@ button {
 @media screen and (max-width:650px) {
   .lonuma > .location {
     width: 100%;
+    justify-content: flex-start;
+    align-items: center;
     line-height: 1.5rem;
   }
   .lonuma > .location > h3 {
     font-size: 20px;
+    display: none;
   }
   .lonuma > .location > a {
     font-size: 13px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .location > a > i {
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width:768px) {
@@ -1951,22 +2194,28 @@ button {
   }
   .lonuma > .location > a {
     font-size: 13px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .location > a > i {
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 }
 
 .lonuma > .number {
-  width: 40%;
-  gap: 10px;
+  width: 100%;
+  gap: 30px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: flex-start;
   line-height: 1.7rem;
 }
 .lonuma > .number > h3 {
+  width: 200px;
   font-size: 25px;
   color: #302e2e;
 }
@@ -1977,57 +2226,86 @@ button {
   align-items: center;
   color: #008B8B;
 }
+.number > a > i:nth-child(1) {
+  font-size: 20px;
+  display: flex;
+}
+a > i:nth-child(2) {
+  font-size: 20px;
+  display: flex;
+}
 @media screen and (max-width:650px) {
   .lonuma > .number {
     width: 100%;
     line-height: 1.5rem;
+    justify-content: flex-start;
+    flex-direction: row;
   }
   .lonuma > .number > h3 {
     font-size: 20px;
+    display: none;
   }
   .lonuma > .number > a {
     font-size: 10px;
     justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .number > a > i {
+    font-size: 20px;
+    /* margin-bottom: 20px; */
   }
 }
 @media screen and (max-width:768px) {
   .lonuma > .number {
     width: 100%;
     line-height: 1.5rem;
+    justify-content: flex-start;
+    flex-direction: row;
   }
   .lonuma > .number > h3 {
     font-size: 20px;
+    display: none;
   }
   .lonuma > .number > a {
     font-size: 10px;
     justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .number > a > i {
+    font-size: 20px;
+    /* margin-bottom: 20px; */
   }
 }
 
+
 .lonuma > .mail {
-  width: 40%;
-  gap: 10px;
+  width: 100%;
+  gap: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column; */
+  justify-content: flex-start;
   align-items: center;
   line-height: 1.7rem;
 }
 .lonuma > .mail > h3 {
+  width: 210px;
   font-size: 25px;
   color: #302e2e;
 }
 .lonuma > .mail > a {
-  gap: 10px;
+  gap: 20px;
   font-size: 12px;
   display: flex;
   align-items: center;
   color: #008B8B;
 }
+.mail > a > i{
+  font-size: 25px;
+}
 
 @media screen and (max-width:650px) {
   .lonuma > .mail {
@@ -2036,12 +2314,17 @@ button {
   }
   .lonuma > .mail > h3 {
     font-size: 20px;
+    display: none;
   }
   .lonuma > .mail > a {
-    font-size: 10px;
     justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 20px;
+    /* flex-direction: column; */
+  }
+  .mail > a > i {
+    font-size: 24px;
+    /* margin-bottom: 20px; */
   }
 }
 @media screen and (max-width:768px) {
@@ -2051,12 +2334,17 @@ button {
   }
   .lonuma > .mail > h3 {
     font-size: 20px;
+    display: none;
   }
   .lonuma > .mail > a {
-    font-size: 10px;
     justify-content: flex-start;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 20px;
+    /* flex-direction: column; */
+  }
+  .mail > a > i {
+    font-size: 24px;
+    /* margin-bottom: 20px; */
   }
 }
 
@@ -2125,6 +2413,8 @@ button {
   display: flex;
 }
 #login > form > input {
+  width: 400px;
+  height: 40px;
   font-size: 15px;
   display: flex;
   outline: none;
@@ -2167,6 +2457,7 @@ button {
     font-size: 15px;
   }
   #login > form > input {
+    width: 330px;
     font-size: 14px;
     display: flex;
   }
@@ -2235,26 +2526,16 @@ form > label {
 form > input {
   all: unset;
   width: 400px;
-  height: 35px;
+  height: 40px;
   padding-left: 10px;
   margin-top: 7px;
   background-color: #fff;
   border-radius: 7px;
-}
-form > select {
-  all: unset;
-  width: 400px;
-  height: 35px;
-  padding-left: 10px;
-  margin-top: 7px;
-  background-color: #fff;
-  border-radius: 7px;
-  align-items: center;
 }
 
 form > button {
-  width: 410px;
-  height: 35px;
+  width: 100px;
+  height: 40px;
   align-items: center;
   justify-content: center;
   font-size: 20px;
@@ -2295,20 +2576,13 @@ form > button {
   }
   form > input {
     width: 100%;
-    height: 30px;
+    height: 400px;
     padding-left: 5px;
     margin-top: 5px;
     font-size: 10px;
   }
-  form > select {
-    width: 100%;
-    height: 30px;
-    padding-left: 5px;
-    margin-top: 5px;
-  }
   form > button {
-    width: 100%;
-    height: 30px;
+    height: 40px;
     padding-left: 5px;
     margin-top: 5px;
   }
@@ -2338,20 +2612,13 @@ form > button {
   }
   form > input {
     width: 100%;
-    height: 30px;
+    height: 40px;
     padding-left: 5px;
     margin-top: 5px;
     font-size: 10px;
   }
-  form > select {
-    width: 100%;
-    height: 30px;
-    padding-left: 5px;
-    margin-top: 5px;
-  }
   form > button {
-    width: 100%;
-    height: 30px;
+    height: 40px;
     padding-left: 5px;
     margin-top: 5px;
   }
@@ -2376,7 +2643,7 @@ form > button {
   justify-content: flex-start;
   align-items: flex-start;
   color: #fff;
-  gap: 50px;
+  gap: 20px;
 }
 
 .footer-card > .card {
@@ -2385,8 +2652,18 @@ form > button {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  margin-left: 20px;
+  margin-left: 40px;
   padding: 10px;
+}
+
+.card > a {
+  display: flex;
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .follow > h3 {
@@ -2423,17 +2700,28 @@ form > button {
   .footer-card {
     width: 100%;
     flex-direction: column;
-    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
   }
   .footer-card > .card {
     width: 100%;
     margin-left: 0px;
-    padding: 7px;
+    /* padding: 20px; */
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .card > a {
+    display: none;
+  }
+  .follow {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
   }
   .follow > h3 {
     font-size: 22px;
     margin-bottom: 7px;
-    text-align: center;
   }
   .follow > .hand {
     font-size: 25px;
@@ -2450,12 +2738,21 @@ form > button {
   .footer-card > .card {
     width: 100%;
     margin-left: 0px;
-    padding: 7px;
+    /* padding: 20px; */
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .card > a {
+    display: none;
+  }
+  .follow {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
   }
   .follow > h3 {
     font-size: 22px;
     margin-bottom: 7px;
-    text-align: center;
   }
   .follow > .hand {
     font-size: 25px;
